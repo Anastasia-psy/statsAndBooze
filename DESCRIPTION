@@ -4,7 +4,7 @@ Version: 0.0.0.9000
 Authors@R: 
     person("Anastasia", "Galkina", , "a.galkina@campus.unimib.it", role = c("aut", "cre"),
            comment = c(ORCID = "YOUR-ORCID-ID"))
-Description: ABC2
+Description: ABC22
 License: MIT + file LICENSE
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
