@@ -9,3 +9,4 @@
 decide_happy_hour <- function(x) {
   lubridate::as_date(Reduce(lubridate::intersect , x))
 }
+2+2
