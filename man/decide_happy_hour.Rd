@@ -19,9 +19,9 @@ Intersect a list of dates
 }
 \examples{
 list_dates <- list(
-  a = c("2023-04-01", "2023-04-03 / 2023-04-05"),
-  b = c("2023-04-02", "2023-04-03"),
-  c = "2023-04-02 / 2023-04-03"
+  a = c("sab", "gio", "dom"),
+  b = c("2023-04-27", "2023-04-30"),
+  c = "2023-04-28 / 2023-04-30"
 )
 
 parsed_dates <- parse_dates(list_dates)
