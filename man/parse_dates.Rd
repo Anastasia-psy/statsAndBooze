@@ -7,7 +7,8 @@
 parse_dates(x)
 }
 \arguments{
-\item{x}{A list of strings that describe when someone is available for a beer}
+\item{x}{A list of strings that describe when someone is available for a beer
+(dates in string format or days of week).}
 }
 \value{
 A list of Dates when someone is available for a beer. The strings are
@@ -21,13 +22,18 @@ Parse list of strings into dates
 Please notice that each date must be specified using the
 YYYY-MM-DD format. A time interval should be specified using the following format:
 "YYYY-MM-DD / YYYY-MM-DD", where the first date is the start of the interval,
-and the second date is the end of the interval.
+and the second date is the end of the interval. A day can also be specified as a day of
+week, using the following labels: "lun" - "mar" - "mer" - "gio" - "ven" - "sab" - "dom".
+You can specify more than one day of week, but cannot use intervals for days of week.
+The names of the weekdays refer to the subsequent 7 days with respect to the current day
+(including) when the function is run. For each person the dates should be specified or in
+date form or as days of the week, but not in a mixed form.
 }
 \examples{
 list_dates <- list(
-  a = c("2023-04-01", "2023-04-03 / 2023-04-05"),
-  b = c("2023-04-02", "2023-04-03"),
-  c = "2023-04-02 / 2023-04-03"
+  a = c("sab", "gio", "dom"),
+  b = c("2023-04-27", "2023-04-30"),
+  c = "2023-04-28 / 2023-04-30"
 )
 (parse_dates(list_dates))
 }
