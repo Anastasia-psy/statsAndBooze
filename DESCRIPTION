@@ -6,7 +6,8 @@ Authors@R:
     person("Anastasia", "Galkina", email = "a.galkina@campus.unimib.it", role = c("cre", "aut")),
     person("Paola", "Galfrascoli", email = "p.galfrascoli@campus.unimib.it", role = "aut"),
     person("Caterina", "Daidone", email = "caterina.daidone@campus.unimib.it",  role = "aut"),
-    person("Muhammad_Haroon", "Shaukat", email = "muhammad.shaukat@unibg.it", role = "aut"))
+    person("Muhammad_Haroon", "Shaukat", email = "muhammad.shaukat@unibg.it", role = "aut")
+    )
 Description: ABC22
 License: MIT + file LICENSE
 Encoding: UTF-8
