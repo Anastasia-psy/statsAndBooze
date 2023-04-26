@@ -2,19 +2,32 @@
 % Please edit documentation in R/parse.R
 \name{parse_dates}
 \alias{parse_dates}
-\title{Parse string dates into dates}
+\title{Parse list of strings into dates}
 \usage{
 parse_dates(x)
 }
 \arguments{
-\item{x}{a list of character dates}
+\item{x}{A list of strings that describe when someone is available for a beer}
 }
 \value{
-a list of Date vectors
+A list of Dates when someone is available for a beer. The strings are
+converted into objects of class Date. The intervals are represented by a sequence of
+Dates within the interval.
 }
 \description{
-Parse string dates into dates
+Parse list of strings into dates
+}
+\details{
+Please notice that each date must be specified using the
+YYYY-MM-DD format. A time interval should be specified using the following format:
+"YYYY-MM-DD / YYYY-MM-DD", where the first date is the start of the interval,
+and the second date is the end of the interval.
 }
 \examples{
-1 + 1
+list_dates <- list(
+  a = c("2023-04-01", "2023-04-03 / 2023-04-05"),
+  b = c("2023-04-02", "2023-04-03"),
+  c = "2023-04-02 / 2023-04-03"
+)
+(parse_dates(list_dates))
 }
