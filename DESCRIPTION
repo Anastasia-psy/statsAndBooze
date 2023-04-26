@@ -8,13 +8,15 @@ Authors@R:
     person("Caterina", "Daidone", email = "caterina.daidone@campus.unimib.it",  role = "aut"),
     person("Muhammad_Haroon", "Shaukat", email = "muhammad.shaukat@unibg.it", role = "aut")
     )
-Description: ABC22
+Description: A set of functions that facilitate finding the nearest date for a beer
+    when all the participants are available.
 License: MIT + file LICENSE
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.2.3
 Imports: 
-    lubridate
+    lubridate,
+    stringr
 Suggests: 
     testthat (>= 3.0.0)
 Config/testthat/edition: 3
