@@ -32,7 +32,7 @@ with the available dates for each participant) should be transformed
 from string to data format. Use the function `parse_dates()` for this
 task.
 
-In the list you should specify the dates in YYYY-MM-DD format like in
+In the list you should specify the dates in `YYYY-MM-DD` format like in
 the example below:
 
 ``` r
@@ -50,7 +50,7 @@ parse_dates(dates)
 ```
 
 You can also specify a time interval when a participant is available.
-This should be done in the following format: YYYY-MM-DD / YYYY-MM-DD
+This should be done in the following format: `YYYY-MM-DD / YYYY-MM-DD`
 (see example).
 
 ``` r
@@ -73,7 +73,7 @@ parse_dates(dates)
 
 You can also specify the dates using the workdays names in your local
 language in the abbreviated form. To see the available values for days
-of week run the function lubridate::wday(x, label = TRUE).The names of
+of week run the function `lubridate::wday(x, label = TRUE)`.The names of
 the weekdays refer to the subsequent 7 days with respect to the current
 day (including) when the function is run. For each person the dates
 should be specified or in date form or as days of the week, but not in a
