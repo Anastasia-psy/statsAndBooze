@@ -4,7 +4,8 @@
 #' YYYY-MM-DD format. A time interval should be specified using the following format:
 #' "YYYY-MM-DD / YYYY-MM-DD", where the first date is the start of the interval,
 #' and the second date is the end of the interval. A day can also be specified as a day of
-#' week, using the following labels: "lun" - "mar" - "mer" - "gio" - "ven" - "sab" - "dom".
+#' week in the local language in abbreviated form. To see the available values
+#' for days of week run the function lubridate::wday(x, label = TRUE), e.g. lubridate::wday("2023-04-20", label = TRUE).
 #' You can specify more than one day of week, but cannot use intervals for days of week.
 #' The names of the weekdays refer to the subsequent 7 days with respect to the current day
 #' (including) when the function is run. For each person the dates should be specified or in
