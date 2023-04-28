@@ -55,7 +55,7 @@ You can also specify a time interval when a participant is available. This shoul
 done in the following format: YYYY-MM-DD / YYYY-MM-DD (see example).
 
 
-```{r example}
+```{r}
 dates <- list(
   andrea = c("2023-04-01", "2023-04-03 / 2023-04-05"),
   federico = c("2023-04-02", "2023-04-03"),
@@ -67,7 +67,7 @@ parse_dates(dates)
 
 You can also specify the dates using the workdays names in your local language in the abbreviated form. To see the available values for days of week run the function lubridate::wday(x, label = TRUE).The names of the weekdays refer to the subsequent 7 days with respect to the current day (including) when the function is run. For each person the dates should be specified or in date form or as days of the week, but not in a mixed form. See example below:
  
-```{r cars}
+```{r lubridate}
 lubridate::wday("2023-04-28", label = TRUE)
 
 dates <- list(
@@ -81,7 +81,7 @@ parse_dates(dates)
 
 Finally to define the date for a beer you need the function `decide_happy_hour()`, which takes the output of the function `parse_dates` as input. In case there are several dates when all the participants are available, the function returns the nearest suitable date. See the exampel below.
 
-```{r pressure, echo = FALSE}
+```{r}
 dates <- list(
   andrea = c("sab", "gio", "dom"),
   federico = c("2023-04-27", "2023-04-30"),

@@ -107,7 +107,18 @@ Finally to define the date for a beer you need the function
 participants are available, the function returns the nearest suitable
 date. See the exampel below.
 
-    #> [1] "2023-04-30"
+``` r
+dates <- list(
+  andrea = c("sab", "gio", "dom"),
+  federico = c("2023-04-27", "2023-04-30"),
+  chiara = "2023-04-28 / 2023-04-30"
+)
+
+parsed_dates <- parse_dates(dates)
+
+decide_happy_hour(parsed_dates)
+#> [1] "2023-04-30"
+```
 
 The function returns `Date of length 0` if there is no date when all the
 paricipants are available.
