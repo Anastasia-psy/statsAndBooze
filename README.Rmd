@@ -77,7 +77,7 @@ dates <- list(
 parse_dates(dates)
 ```
 
-Finally, to define the date for the happy hour, you need the function `decide_happy_hour()`, which takes the output of the function `parse_dates` as input. In case there are several dates when all the participants are available, the function returns the nearest suitable date. See the example below.
+Finally, to define the date for a happy hour, you need the function `decide_happy_hour()`, which takes the output of the function `parse_dates` as input. In case there are several dates when all the participants are available, the function returns the nearest suitable date. See the example below.
 
 ```{r}
 dates <- list(

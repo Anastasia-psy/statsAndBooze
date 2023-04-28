@@ -6,8 +6,8 @@
 <!-- badges: start -->
 <!-- badges: end -->
 
-The goal of statsAndBooze is to facilitate finding the nearest date for
-a beer when all the participants are available.
+The goal of statsAndBooze is to find the optimal date for a happy hour,
+i.e. the closest date when all the participants are available.
 
 ## Installation
 
@@ -27,12 +27,11 @@ To load the package:
 library(statsAndBooze)
 ```
 
-For defining a suitable date for a beer first the input (a list of names
-with the available dates for each participant) should be transformed
-from string to data format. Use the function `parse_dates()` for this
-task.
+The input must be a list of names with the available dates for each
+participant and must be transformed from string to data format. Use the
+function `parse_dates()` for this task.
 
-In the list you should specify the dates in `YYYY-MM-DD` format like in
+In the list, you must specify the dates in `YYYY-MM-DD` format like in
 the example below:
 
 ``` r
@@ -50,7 +49,7 @@ parse_dates(dates)
 ```
 
 You can also specify a time interval when a participant is available.
-This should be done in the following format: `YYYY-MM-DD / YYYY-MM-DD`
+This must be done in the following format: `YYYY-MM-DD / YYYY-MM-DD`
 (see example).
 
 ``` r
@@ -73,11 +72,11 @@ parse_dates(dates)
 
 You can also specify the dates using the workdays names in your local
 language in the abbreviated form. To see the available values for days
-of week run the function `lubridate::wday(x, label = TRUE)`.The names of
-the weekdays refer to the subsequent 7 days with respect to the current
-day (including) when the function is run. For each person the dates
-should be specified or in date form or as days of the week, but not in a
-mixed form. See example below:
+of week, run the function `lubridate::wday(x, label = TRUE)`.The names
+of the weekdays refer to the subsequent 7 days with respect to the
+current day (included) when the function is run. For each person the
+dates must be specified or in date form or as days of the week, but not
+in a mixed form. See the following example:
 
 ``` r
 lubridate::wday("2023-04-28", label = TRUE)
@@ -101,11 +100,11 @@ parse_dates(dates)
 #> [1] "2023-04-28" "2023-04-29" "2023-04-30"
 ```
 
-Finally to define the date for a beer you need the function
+Finally, to define the date for a happy hour, you need the function
 `decide_happy_hour()`, which takes the output of the function
 `parse_dates` as input. In case there are several dates when all the
 participants are available, the function returns the nearest suitable
-date. See the exampel below.
+date. See the example below.
 
 ``` r
 dates <- list(
@@ -121,4 +120,4 @@ decide_happy_hour(parsed_dates)
 ```
 
 The function returns `Date of length 0` if there is no date when all the
-paricipants are available.
+participants are available.
